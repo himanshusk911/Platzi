@@ -41,3 +41,6 @@ button{
 .card:hover{
     box-shadow: 10px 10px 20px #ccc;
 }
+.linkmodify{
+    text-decoration: none;
+}
