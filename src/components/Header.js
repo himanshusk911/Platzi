@@ -39,9 +39,3 @@ const Header = () => {
 }
 
 export default Header
-/*
-<form class="d-flex me-5">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-*/

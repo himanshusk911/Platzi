@@ -23,9 +23,9 @@ export const removeFromCart=(itemID)=>{
         payload:itemID,
     }
 }
-export const applySearchFilter=(query)=>{
+export const applySearchFilter=(products)=>{
     return{
         type:actionTypes.APPLY_SEARCH_FILTER,
-        payload:query,
+        payload:products,
     }
 }
