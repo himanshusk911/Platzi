@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch, useSelector } from 'react-redux';
 import { applySearchFilter} from '../Redux/action';
+import { useState } from 'react';
 
 const Header = () => {
   const dispatch=useDispatch();
-  const searchText=useSelector((state)=>state.search.searchText)
+  const [search,setSearch]=useState('')
     const total=useSelector((state)=>state.cart.totalQuantity)
     const handleSearchChange = (event) => {
       dispatch(applySearchFilter(event.target.value)); // Dispatch the action to apply search filter
@@ -21,7 +22,6 @@ const Header = () => {
           <form className="d-flex mr-5">
             <input className="form-control" type="search"
              placeholder="Search" aria-label="Search"
-             value={searchText}
              onChange={handleSearchChange}/>
           </form>
           
