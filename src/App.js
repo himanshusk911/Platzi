@@ -7,12 +7,13 @@ import Cart from "./components/Cart";
 import Login from "./components/Login";
 import Signup from "./components/SignUp";
 import ProtectedRoute from "./components/ProctedRoute";
-import { UserAuthContextProvider } from "./context/UserAuthContext";
+import { UserAuthContextProvider} from "./context/UserAuthContext";
+import { useUserAuth } from "./context/UserAuthContext";
 function App() {
   return (
     <Router>
       <UserAuthContextProvider>
-     <Header/>
+        <Header/>
       <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path="/home" element={

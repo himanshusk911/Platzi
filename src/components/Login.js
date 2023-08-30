@@ -9,15 +9,18 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const {logIn,googleSignIn} =useUserAuth()
+  const {logIn,googleSignIn,isLoggedIn} =useUserAuth()
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(isLoggedIn)
     setError("");
     try {
       await logIn(email, password);
+     
       navigate("/home");
+     
     } catch (err) {
       setError(err.message);
     }
